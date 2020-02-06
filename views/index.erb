@@ -6,7 +6,10 @@
     <p>Age: <%= student.age() %></p>
   </li><hr>
   <form action="/hogwarts/<%=student.id %>/delete" method="post">
-  <input type="submit" value="Delete"/>  
+  <input type="submit" value="Delete"/>
+  </form>
+  <form action="/hogwarts/<%= student.id %>/edit" method="get"> <input type="submit" value="Edit"/>
+
   </form>
 
   <%end %>

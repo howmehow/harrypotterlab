@@ -30,6 +30,18 @@ get "/hogwarts/houses" do
   erb(:houses)
 end
 
+get "/hogwarts/:id/edit" do
+  @student = Student.find(params[:id])
+  @houses = House.all()
+  erb(:edit)
+end
+
+post "/hogwarts/:id" do
+  @students = Student.new(params)
+  @student.update()
+  redirect "/hogwarts/students"
+end
+
 post "/hogwarts/:id/delete" do
   student = Student.find(params[:id])
   student.delete()
