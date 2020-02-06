@@ -7,7 +7,7 @@ attr_accessor :first_name, :second_name, :house_id, :age
     @id = options["id"].to_i() if options["id"]
     @first_name = options["first_name"]
     @second_name = options["second_name"]
-    @house_id = options["house_id"]
+    @house_id = options["house_id"].to_i()
     @age = options["age"].to_i()
   end
 
@@ -37,9 +37,11 @@ attr_accessor :first_name, :second_name, :house_id, :age
     SqlRunner.run(sql, values)
   end
   def find_house()
-    sql = "SELECT houses.* FROM houses
-    INNER JOIN students ON students.house_id = houses.id WHERE students.id = $1"
-    values = [@id]
+    # sql = "SELECT houses.* FROM houses
+    # INNER JOIN students ON students.house_id = houses.id WHERE students.id = $1"
+    sql = "SELECT * FROM houses
+    WHERE id = $1"
+    values = [@house_id]
     result = SqlRunner.run(sql, values)
     house = House.new(result.first)
     return house
