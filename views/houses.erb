@@ -1,0 +1,9 @@
+<ul>
+  <% @houses.each do |house| %>
+  <li>
+    <p>Name: <%=house.name() %></p>
+     <img src=<%= house.logo() %> alt="house_logo">
+
+  </li>
+  <%end %>
+</ul>

@@ -1,0 +1,9 @@
+<ul>
+  <% @students.each do |student| %>
+  <li>
+    <p>Name: <%=student.first_name() %> <%=student.second_name()%></p>
+    <p>House: <%= student.house() %></p>
+    <p>Age: <%= student.age() %></p>
+  </li>
+  <%end %>
+</ul>
