@@ -5,11 +5,23 @@ nav ul {
   overflow: hidden;
   background-color: #333;
 }
-
+li {
+  color: white;
+}
 nav li {
   float: left;
 }
-
+label {
+  color: white;
+}
+img{
+  width: 13%;
+  height: auto;
+}
+}
+p {
+  color: white;
+}
 nav li a {
   display: block;
   color: white;
@@ -22,8 +34,25 @@ nav li a {
 nav li a:hover {
   background-color: #111;
 }
-body {
-  /* background-image: url("541374.jpg"); */
+/* body {
+  background-image: url();
 
+} */
+h1 {
+  text-shadow:;
+  color: white;
+  text-align: center;
 }
-h1 {text-align: center;}
+body, html {
+  height: 100%;
+  /* The image used */
+  background-image: url("img.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
