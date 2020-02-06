@@ -37,7 +37,7 @@ get "/hogwarts/:id/edit" do
 end
 
 post "/hogwarts/:id" do
-  @students = Student.new(params)
+  @student = Student.new(params)
   @student.update()
   redirect "/hogwarts/students"
 end
